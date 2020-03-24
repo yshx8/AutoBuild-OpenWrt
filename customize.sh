@@ -11,6 +11,7 @@ sed -i 's/OpenWrt/YSHX8/g' openwrt/package/base-files/files/bin/config_generate
 grep 'CONFIG_TARGET_x86=y' openwrt/.config >/dev/null
 if [ $? = 0 ];
 	then
+		sed -i '$a\\' openwrt/package/lean/default-settings/i18n/default.zh-cn.po
 		sed -i '$amsgid\ "YSHX8\ Vendor"' openwrt/package/lean/default-settings/i18n/default.zh-cn.po
 		sed -i '$amsgstr\ "制造商"' openwrt/package/lean/default-settings/i18n/default.zh-cn.po
 		sed -i 's/<th class="cbi-section-table-cell"><%:MAC-Address%><\/th>/<th class="cbi-section-table-cell"><%:MAC-Address%><\/th>\n<th class="cbi-section-table-cell"><%:YSHX8\ Vendor%><\/th>/g' openwrt/package/lean/autocore/files/index.htm
