@@ -66,7 +66,7 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
-        git checkout bc3c38692407c9c8d1dd3c6aeaab5493e54d719e
+        ./git checkout bc3c38692407c9c8d1dd3c6aeaab5493e54d719e
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
