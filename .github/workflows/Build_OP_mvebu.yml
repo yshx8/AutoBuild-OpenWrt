@@ -62,8 +62,8 @@ jobs:
         REPO_URL: https://github.com/coolsnowwolf/lede
         REPO_BRANCH: master
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
-                cd openwrt
-                git checkout bc3c38692407c9c8d1dd3c6aeaab5493e54d719e
+        cd openwrt
+        git checkout bc3c38692407c9c8d1dd3c6aeaab5493e54d719e
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
